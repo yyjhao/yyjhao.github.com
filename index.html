@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<header class='no-border'>
+	<h1>Yujian's Programming Archive</h1>
+	<p>In progress....</p>
+</header>
+<div class='widget'>
+	<header>
+		<h3>About Me</h3>
+	</header>
+	<div class='widget-content'>
+		<p>
+			Hi there! I am Yujian, a student waiting to attend University.
+			I can code in C++ and write Qt apps. I have also learnt HTML5,
+			CSS3 and JavaScript on my own. I like learning new techniques and
+			languages and enjoy making things with the knowledge I gather.
+		</p>
+		<p><a href='/about'>Contacts and more...</a></p>
+	</div>
+</div>
+<div class='widget'>
+	<header>
+		<h3>About This Site</h3>
+	</header>
+	<div class='widget-content'>
+		<p>
+			I built this site with Jekyll. Although I deem it my personal site,
+			it is more of a platform for me to publish my projects.
+		</p>
+		<p>
+			<i>Occasionally</i> I also post some tutorials ({{ site.categories.Tutorials | size }}
+			so far) and a bit of rambling. But as you can see, I don't update it very often. 
+		</p>
+		<p>
+			That said, I have started it only in 2011, so perhaps I 
+			may change my habit of blogging in the future?
+		</p>
+	</div>
+</div>
+<div class='widget'>
+	<header>
+		<h3>My Projects</h3>
+	</header>
+	<div class='widget-content'>
+		{% for post in site.categories.Projects %}
+			{% if post.summary %}
+			<a class='project' href='{{ post.url }}'>
+				<div class='project-inner'>
+					<img src='{{ post.icon }}' class='icon'/>
+					<h4>{{ post.title }}</h4>
+					<p>
+						{{ post.summary }}
+					</p>
+					<p class='link'>More...</p>
+				</div>
+			</a>
+			{% endif %}
+		{% endfor %}
+		<p><a href='/categories/projects'>More projects...</a></p>
+	</div>
+</div>

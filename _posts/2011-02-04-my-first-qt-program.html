@@ -1,0 +1,24 @@
+--- 
+name: my-first-qt-program
+layout: post
+title: My first Qt program
+time: 2011-02-04 06:34:00 +08:00
+category: Others
+tags:
+  - qt
+  - c++
+---
+<p>
+My 2011 plan is to learn qt, and here comes my first qt program-a simple text editor.
+<img src="/images/first-qt-screenshot-1.png" alt="" title="Running on Ubuntu" width="300" height="239" class="center" />
+<img src="/images/first-qt-screenshot-2.png" alt="" title="Running on Win7" width="300" height="248" class="center" />
+</p>
+<p>
+As you can see, one of the best thing about qt is its compatibility across the three major platforms-Linux(X11), windows and Mac(not shown here). Another great feature is its rich UI widget set. Almost all the feature of a text editor are already built-in in the QTextEdit widget. All I have to do is just to design an interface and make use of the various functions. The only function that I actually have to implement is the Find&amp;Replace feature, which serves as a practice to familiarize myself with the QTextCursor library.
+</p>
+<p>
+And Qt SDK comes with an excellent interface designer. Just arrange the widgets and write a few codes to manipulate it-in fact if the functions are simple, one doesn't even need to write codes, since connecting slots and signals-the qt event handler-can be done visually in the designer. But for this project I wrote out the code as a practice.
+</p>
+<p>
+The codes are <a href="http://dl.dropbox.com/u/3501422/sdi.zip">here</a>, and the compiled version for windows is <a href="http://dl.dropbox.com/u/3501422/sdi.exe">here</a>. The size is quite big (10M) because I statically link the libraries, since otherwise I will need a list of annoying Dll files.
+</p>

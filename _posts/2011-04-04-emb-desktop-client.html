@@ -1,0 +1,39 @@
+--- 
+name: emb-desktop-client
+layout: post
+title: EMB Desktop Client
+time: 2011-04-04 05:30:00 +08:00
+category: Projects
+tags:
+  - qt
+  - school
+  - http
+  - html
+summary: >
+  My first 'published' Qt app. It's written for our school's decade-old 
+  electronic message board web site. Reception was poor though, as people 
+  prefer to just click the bookmark link in their browser.
+icon: /images/emb-icon.png
+---
+<p>
+A simple desktop client for Hwa Chong Institution College Section EMB written in C++ with Qt. Coded in collaboration with&nbsp;<a href="https://plus.google.com/110194299440140726703">Jessica</a>
+</p>
+<p>
+You can refer to <a href="http://nplus.atwebpages.com/">this webpage</a> for detailed description. Or go to the Sourceforge page <a href="http://embclient.sourceforge.net/">here</a>. Below is the screenshot:
+</p>
+<img alt="" height="211" src="/images/emb-screenshot.jpg" width="400" class='center' />
+<p>
+The code is a bit messy as it is the first 'complete' Qt Program I have written. I also feel that all the functionalities could have been implemented in HTLM5, which could also provide more flexibility in styling.
+</p>
+<p>
+Nevertheless, the Qt Stylesheet is fantastic. I have never imagined that customizing a program UI could be as simple as writing CSS codes. It also allows me to test out different UI settings, which is very helpful given C++'s slow compiling. However, it is not all perfect. One significant annoyance is that sometimes the QPalette will inherit the Stylesheet while sometimes it won't. For example, I can't set the background of the column taken over by QAbstractItemDelegate as the gradient in Stylesheet. At the end, it turns out I have to set the gradient in the painter() function.
+</p>
+<p>
+There is one very annoying bug which I really don't know how to solve. As I added the Chinese support, some English letters went wrong and became weird symbols.
+</p>
+<p>
+Anyway it was a very fun experience to write a program that's meaningful for someone other than me. Also working with someone artistic really gives me much insight about UI design.
+</p>
+<p>
+Update: just found a bug that causes the background of the 'new item today' to be white instead of green. This is caused by the delegate class which does not automatically set background! Sorry didn't realize the bug yesterday because there wasn't any new items yesterday...
+</p>

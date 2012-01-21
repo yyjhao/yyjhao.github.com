@@ -1,0 +1,28 @@
+--- 
+name: wirelesshci-autologin-daemon
+layout: post
+title: Wireless@HCI autologin Daemon
+time: 2011-08-22 05:41:00 +08:00
+category: Projects
+tags:
+  - http
+  - qt
+  - c++
+hosted-site: Sourceforge
+hosted-url: https://sourceforge.net/projects/hciautologin/
+summary: >
+  A Qt app I coded to try out the graphical library I wrote for Treb 
+  (see above). It's just a daemon that automatically log users into the 
+  wireless network in my boarding school.
+icon: /images/autologin-icon.png
+---
+
+<p>Hullo folks living in HCIBS! Tired of keeping logging into your wireless account every half an hour? Here is <a href="http://sourceforge.net/projects/hciautologin/files/HCIautologin-win.zip/download">an app</a> for you! 
+</p>
+<img alt="screenshot" src="/images/wl-hci-screenshot.png" class='float-right' /> 
+<p>This app will automatically log into HCI@Wireless with your account every half an hour. During the first time you run the app, it will ask for your login credentials. Click 'login now' after you key in the username and password - and that's it, it will automatically log you in subsequently. To make things even more convenient, you can manually create a shortcut and drag it into Start Menu-&gt;Startup, so that it will be launched when you log into Windows.
+</p><p><strong><span style="color: red;">Known Issues(important!)</span></strong> 
+<ul><li>Sadly, because of either Qt or the wireless network, if the first login attempt fails, the app will NOT be able to log in subsequently. You will have to close the app and relaunch it when the network ask you to login :(</li>
+<li>This means that after downloading the app, you should not run it immediately - you should only run it when the network ask you to log in.(because you cannot log in when you are already logged in)</li>
+</ul></p><p>I built this to try out my QGraphicsToolkit library, and the Qt Network module.
+</p>

@@ -1,0 +1,7 @@
+permalink : /:year/:month/:title
+pygments: true
+paginate: 5
+lsi: false
+auto: false
+server: false
+exclude: [".git", "update_site"]

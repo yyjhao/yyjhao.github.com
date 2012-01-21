@@ -1,0 +1,16 @@
+--- 
+name: freecell-with-html5
+layout: post
+title: Freecell with HTML5
+time: 2011-07-17 07:37:00 +08:00
+category: Projects
+tags:
+  - html5
+  - css3
+  - games
+  - html
+---
+<i>The game has been sold to a company and the links are no longer valid.</i>
+
+<p>I spent some time learning css3 and html5 and coded this game. You can play it <a href="http://yyjhao.exofire.net/cards/freecell.html">here</a>, or install it from Chrome Store <a href="https://chrome.google.com/webstore/detail/kgiinlmjpfllfmgcmplnmmllppddbhpe?hl=en-US">here</a>. </p><img alt="" class="center" height="273" src="/images/freecell-screenshot.png" title="freecell" width="400" /> <p>This game was coded primarily for chrome, so it doesn't work on IE or opera. I added support for firefox, but firefox doesn't render scaled background nicely. It also can't render box-shadow efficiently, so the experience on firefox is not very good. Originally I wanted to support IE, but frustratingly, IE9 doesn't support transition-duration :( and I don't want to spend time coding javascript to just make the cards move nicely. I also added support for mobile safari, and it seems to work on android as well. <del datetime="2011-07-17T06:58:33+00:00"></del></p><p>But the support was barely acceptable. The worst part about playing it on mobile platform is that my overuse of shadows, gradients and opacity makes the page lag like hell on those mobile browsers.
+(see update) </p><p>I think there might still be some bugs in the 'hints' function, which I kind of messed up, but other than that, the game is fully functional. </p><p>It was really interesting and exciting to learn so many new features of CSS, gradients, box-shadow, text-shadow and transitions are fantastic for interface design and Javascript is simple yet powerful. It was full of fun to play around with new features. I just hope that the new html5 standard can be quickly established so that we don't have to waste time on ensuring browser compatibility for webpages. </p><p>Next, I will write a solitaire and maybe a Hearts with some ajax :P HTML5 rocks! </p><p><em>update</em> I found a way to drastically improve the performance of animation-intensive webpage on mobile safari: add a -webkit-transform: translate3d(0, 0, 0) to the animating element in the style sheet. This will cause mobile safari to use hardware acceleration to render the elements, thus improve the drawing speed. I am not sure whether it works for android browsers though, but the improvement is really amazing! </p>

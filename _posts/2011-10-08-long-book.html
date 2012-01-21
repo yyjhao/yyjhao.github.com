@@ -1,0 +1,123 @@
+--- 
+name: long-book
+layout: post
+title: How to code a book in CSS
+time: 2011-10-08 18:31:00 +08:00
+category: Tutorials
+tags:
+  - html
+  - css3
+  - blog
+  - themes
+---
+<p>This is my first blog theme, which isn't strictly a theme, since it's too customized to be used by any non-coders. I call it The Long Book, as it is supposed to mimic a book, and turns out to be rather long....
+</p><img height="206" width="320" src="/images/longbook-screenshot.png" />
+<p>I drew inspiration from <a href="http://kev.inburke.com/kevin/site-redesign/">this guy</a> and, clearly, Apple iBooks. And I chose Blogger as the platform since it supports both CSS and JavaScript <em>for free</em>. 
+</p><p>I will talk about how to code such a 'book' in this post.
+</p><h3>The Mark-up
+</h3><p>The HTML mark-up is rather straight-forward:</p>
+{% highlight html %}
+<div id='main-body'>
+	<div id='body-left'>
+		<!-- the left side -->
+	</div>
+	
+	<div id='body-right'>
+		<!-- the right side -->
+	</div>
+</div>
+{% endhighlight %}
+<h3>The CSS
+</h3><p>We first apply some CSS to make it a two-column page.
+{% highlight css %}
+#main-body{
+	width:940px;
+}
+#body-left, #body-right{
+	width:50%;
+	display:table-cell;
+}
+{% endhighlight %}
+'table-cell' ensures that the two column will have the same height.
+</p><p>To make each column look 'bookish', we then apply a horizontal gradient and a border-radius at one side of each column.  
+</p><p>Take the left side for example:</p>
+{% highlight css %}
+#body-left{
+	border-bottom-right-radius: 90px 20px;
+	border-top-right-radius: 90px 20px;
+	background-image: -webkit-linear-gradient(
+		left, #EBCF8F, #F0DFB3 90%, #a08050
+	);
+	background-image: -ms-linear-gradient(
+		left, #EBCF8F, #F0DFB3 90%, #a08050
+	);
+	background-image: -moz-linear-gradient(
+		left, #EBCF8F, #F0DFB3 90%, #a08050
+	);
+	background-image: -o-linear-gradient(
+		left, #EBCF8F, #F0DFB3 90%, #a08050
+	);
+}
+{% endhighlight %}
+<p>
+Notice that there are three color-stops in the gradient. The gradient goes from slightly dark to light near the end, then to very dark at the end. This creates a feeling of different heights along the 'page'. The same gradient and border-radius can be applied to the right side, but with the horizontal direction inverted. 
+</p>
+<p>Now we can add some 'decoration' around the two sides to create a feeling of 'depth' - that there are many pages underneath - as well as to add a 'book cover' below. To do so, we can use the ::before and ::after hack.
+</p>
+<p>First add a <code style='display:inline-block'>display:relative</code> to both #body-left and #body-right. Then apply the following CSS code:</p>
+{% highlight css %}
+#body-left::before{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border: 15px solid transparent;
+	border-top-width: 20px;
+	left: -30px;
+	border-right-color: #BDA674;
+}
+{% endhighlight %}
+<p>
+Note that without specifying 'content', ::before will not be shown at all! 
+</p><p>This is a 'classic' thick transparent border hack. The most basic form is the <a href='http://css-tricks.com/snippets/css/css-triangle/'>CSS triangle</a>. 
+</p><p>By specifying a height larger than 0 (in this case there is a distance between top and bottom), one can easily create a trapezoid. This code thus creates a darker trapezoid at the left of the left side to mimic a number of pages underneath. The larger border-top-width is a tweak to make it look more realistic.
+</p><p>Again, the same code can be applied to the right side, with the horizontal direction inverted.
+</p><p>The 'book cover' is easier - just a rounded rectangle behind each sides.</p>
+{% highlight css %}
+#body-left::after{
+	content: " ";
+	position: absolute;
+	top: 10px;
+	bottom: 5px;
+	background: #BD672A;
+	z-index: -1;
+	border-radius: 15px;
+	box-shadow: 0 0 5px black, inset 0 0 3px white;
+	left: -30px;
+	right: 40px;
+}
+{% endhighlight %}
+<p>Lastly, a little bit of shadow below both sides to make the feeling of depth more realistic.</p>
+{% highlight css %}
+#main-body{
+	display:relative;
+}
+#main-body::before{
+	content: " ";
+	position: absolute;
+	left: -15px;
+	right: -15px;
+	top: 15px;
+	bottom: 15px;
+	box-shadow: 0 0 20px 5px black;
+	background: black;
+	border-radius: 15px;
+}
+{% endhighlight %}
+<p>
+We don't use #body-left and #body-right due to the rounded corner at the side. And we use #main-body::before instead of #main-body because this allows use to shrink to size of the shadow in the vertical direction and enlarge in the horizontal direction to accommodate the 'irregular' shape of the two sides.
+</p><p>That's it! A simple mark-up with some fanciful CSS3 hacks. No use of images at all.
+</p><h3>Drawbacks</h3><p>This way of styling clearly ignores the principal of Progressive Enhancement since the page look really really terrible in browsers that don't support gradient and border-radius (such as IE8 and below). It looks OK on IE9, but since IE9 doesn't support linear-gradient, the appearance is still a bit weird.
+</p><p>Aside from that, there seems to be a bug in both IE9 and IE10 that the absolute alignment of ::before of both sides only match the height of the contents rather than the block, thus leaving behind a piece of black shadow. Very annoying indeed!
+</p>

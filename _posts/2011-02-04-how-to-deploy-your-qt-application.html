@@ -1,0 +1,58 @@
+--- 
+name: how-to-deploy-your-qt-application
+layout: post
+title: How to deploy your Qt application without any Dll files
+time: 2011-02-04 21:46:00 +08:00
+category: Tutorials
+tags:
+  - qt
+  - static linking
+  - compile
+  - c++
+  - windows
+---
+<p>
+Running Qt on Ubuntu is great, because most of the supporting libraries are installed by default. However, to deploy a Qt application on Windows, you have to make sure that the application comes with all the Dll files, which I personally find annoying. Of course, it is possible to package the whole Qt application in one exe executable-by linked against the Qt libraries statically.
+</p>
+<p>
+Following the guide <a href="http://qtnode.net/wiki?title=Building_static">here</a>, and you will still get a frustrating error asking for the mingwm10.dll file. The only way to avoid this is to link statically against the compiler library as well.
+</p>
+<p>
+To do so, first open the qmake.conf here: %qtdir%\mkspecs\win32-g++\qmake.conf. %qtdir% is where your Qt libraries are installed, normally it should be in some place like C:\Qt\2010.05\qt. Look for the line with "QMAKE_LFLAGS=", and change it from
+{% highlight ini %}
+QMAKE_LFLAGS		= -enable-stdcall-fixup -Wl,-enable-auto-import -Wl,-enable-runtime-pseudo-reloc
+{% endhighlight %}
+to
+{% highlight ini %}
+QMAKE_LFLAGS		= -static -enable-stdcall-fixup -Wl,-enable-auto-import -Wl,-enable-runtime-pseudo-reloc
+{% endhighlight %}
+i.e. add a '-static' argument.
+</p>
+<p>Next, go to Qt Command Prompt (can be found in the start menu), issue these commands:
+{% highlight bat %}
+configure -static -release -no-exceptions
+mingw32-make sub-src
+{% endhighlight %}
+</p>
+<p>
+This will recompile the whole Qt library to allow static linking. It can take a very long time(2+ hours on my laptop).
+</p>
+<p>
+Now you can modify your project to tell the compiler to compile your application statically. Add this line in your .pro file:
+{% highlight ini %}
+CONFIG += staticlib
+{% endhighlight %}
+</p>
+<p>
+Compile your project in release mode afterwards, this should give you a .exe file with a size &gt;5m. The application should now be able to run on other Windows machines without any Qt libraries.  
+</p>
+<p>
+Of course we can reduce the size of the application since it probably contains some Qt libraries that are not used at all. Go the Qt Command Prompt, and enter to the directory containing your application, type:
+{% highlight bat %}
+strip -s *.exe
+{% endhighlight %}
+where *.exe is the name of your application.
+</p>
+<p>
+This step will not reduce much of the size(maybe a few k). A good idea is to use UPX to compress your application afterwards, which I haven't tried though.
+</p>

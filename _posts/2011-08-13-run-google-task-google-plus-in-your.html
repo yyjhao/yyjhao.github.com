@@ -1,0 +1,71 @@
+--- 
+name: run-google-task-google-plus-in-your
+layout: post
+title: Treb
+time: 2011-08-13 20:58:00 +08:00
+category: Projects
+tags:
+  - html
+  - http
+  - qt
+  - c++
+  - google tasks
+  - qt webkit
+hosted-site: Sourceforge
+hosted-url: http://treb.sf.net/
+summary: >
+  Another Qt app I have coded. It allows users to place icons in the 
+  system tray for fast access of mobile or small websites. Good to use 
+  with Google+, facebook or Google Tasks!
+icon: /images/treb-icon.png
+---
+<img class='float-left' height="150" src="/images/treb-icon.png" title="treb" width="150" /></a>
+<p>
+At first I wanted to code a simple Google Tasks client, something that allows me to summon <a href="https://mail.google.com/tasks/ig">https://mail.google.com/tasks/ig</a> quickly. But as I started coding, my ideas evolved, so finally I kind of merged two new ideas and created this app.
+</p>
+<p>
+Firstly, I think we should be able to use mobile pages on our desktop for quick view of information. For example, instead of building a twitter client, we can just use the mobile twitter to quickly view new tweets or post tweets, and use the desktop version of twitter.com for other 'advance' actions.
+</p>
+<p>
+Secondly, I think we can have a richer interface for those system tray programs. I think we should be able to open a 'temporary window' by clicking on the system tray icons, and quickly close it by clicking outside the window. This 'window', or pop-up can display some information, and provide shortcuts to some simple functions. And it should remain running in the background.
+</p>
+<img alt="" class="center" height="300" src="/images/treb-screenshot-1.png" title="Screenshot" width="223" />
+<p>
+So I coded this thing call 'Treb'. You can download the Windows binary <a href="http://sourceforge.net/projects/treb/files/treb-win.zip/download">here</a>.
+</p>
+<p>
+Treb=tray+web (sounds silly, eh?) It allows you to run some web pages in the background (not just mobile pages), and display icons for each page in the system tray. By clicking on the icons, the page will appear, along with two buttons-refresh, and 'open desktop version in browser'.
+</p>
+<p>
+Shown here is an example of running Google Tasks, which is my favorite TODO list app. It's not a mobile page though, but websites like Google+ and facebook do run well in Treb as well. 
+</p>
+<p>
+The main configuration looks straight-forward. 
+</p>
+<img alt="Configuring Treb" class="center" height="351" src="/images/treb-screenshot-2.png" title="Configuring Treb" width="451" />
+<p>
+The check box before the icon determines whether a Treb instance should be shown or not. By unchecking it, you can remove the Treb instance temporarily. To permanently delete a Treb instance, choose the treb you want to remove and click delete. "New" button allows you to create new Treb instance and "edit" allows you to edit(duh). Removing cookie is also possible. You can also import or export Treb instances, I will talk more about that later.
+</p>
+<p>
+So if you 'new' or 'edit' a Treb instance, this is what you will get.
+</p>
+<img alt="Configuring A Treb Instance" class="center" height="240" src="/images/treb-screenshot-3.png" title="Configuring A Treb Instance" width="400" />
+<p>
+Click on the button with the icon to change the icon. By default, Treb will use the favicon of the website. The text box next to the button allows you to set the name of the treb instance. Url is the url of the mobile website, and browser url is the url of the desktop version of the site. Zoom factor allows you to zoom in and out of the website and 'identify as' allows you to cheat the server into believing you are using a cell phone to visit their sites. You can also ask Treb to auto-refresh in between certain time intervals, and to store or not to store cookie.
+</p>
+<p>
+Looks complicated eh? Because you need to know the url of the mobile site and how much to zoom? That's why I coded the import/export function. So after setting up a Treb instance, you can export it to a .treb file, and others can import the file. This should make the program slightly more user-friendly. I have uploaded some Treb instances <a href="http://sourceforge.net/projects/treb/files/trebs.zip/download">here</a>
+</p>
+<p>
+Known Issues:
+<ul>
+<li>You have to manually log into facebook and twitter every time you run the app, because these two does not provide a 'save my password' option in the mobile login site.
+</li>
+<li>Certain sites that use a lot of HTML5 or browser specific functionalities may not be displayed properly. You can however, change the 'identify as' to default or Nokia to force the website to show a simpler version
+</li>
+<li>How can people share their exported Treb instances easily? I am still thinking about this....</li>
+</ul>
+</p>
+<p>
+This program was coded with Qt. The popup is actually a transparent QGraphicsView (because I use the scaling animation). I have coded a QGraphicsToolkit (not a nice name :P) library that provides some simple API to construct such popup. The webpage viewer is of course, based on QWebkit. Hopefully with more updates from QWebkit, this app can support more websites nicely.
+</p>
