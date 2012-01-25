@@ -72,16 +72,19 @@ a:link, a:visited{
 }
 
 a:link{
-	color: #4B55A6;
 	transition-duration: 0.2s;
 }
 
-a:visited{
-	color: #292F5C; 
+a:link:not(.project){
+	color: #002D82; 
+}
+
+a:visited:not(.project){
+	color: #4B55A6;
 }
 
 
-a:link:hover, a:visited:hover{
+a:link:hover:not(.project), a:visited:hover:not(.project){
 	color: #616ED7;
 }
 
@@ -111,7 +114,7 @@ nav li{
 	vertical-align: top;
 }
 
-nav a{
+nav a, .downbutton{
 	text-decoration: none;
 	font-weight: bold;
 	padding: 5px 10px;
@@ -124,6 +127,8 @@ nav a{
 	border-left: none;
 	border-bottom: none;
 	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7);
+	height: 1.2em;
+	line-height: 1.2;
 }
 
 nav li:first-of-type>a{
@@ -135,14 +140,13 @@ nav li:last-of-type>a{
 	border-top-right-radius: 10px;
 }
 
-nav a:hover, a.tag:hover{
+nav a:hover, a.tag:hover, .downbutton:hover{
 	background: #E6E9FF;
 }
 
-nav a:active{
+nav a:active, .downbutton:active{
 	box-shadow: inset 0 2px 5px #7F959C;
-	padding-top: 7px;
-	padding-bottom: 3px;
+	line-height: 1.6;
 }
 
 .content{
@@ -294,17 +298,19 @@ img.icon{
 a.tag{
 	text-decoration: none;
 	background: #DDE1FF;
-	padding: 2px 10px;
-	border-radius: 10px;
 	box-shadow: 0 1px 1px #7F959C, inset 0 1px 1px white;
 	display: inline-block;
 	vertical-align: top;
+	padding: 0.2em 0.5em;
+	border-radius: 1.2em;
+	height: 1.2em;
+	line-height: 1.2;
+	transition-duration: 0;
 }
 
 a.tag:active{
 	box-shadow: inset 0 1px 1px #7F959C, 0 1px 1px white;
-	padding-top: 3px;
-	padding-bottom: 1px;
+	line-height: 1.4;
 }
 
 header.no-border{
