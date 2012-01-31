@@ -1,23 +1,17 @@
 <style>
 	.search-box{
-		position: relative;
 		border-color: #7F959C;
 	}
 	
 	#search-input{
-		margin: 0;
+		margin: 0 auto;
 		border-radius: 1em;
+		border: none;
 		appearance: none;
-		border: 1px solid;
 		padding: 3px 1em;
-		box-shadow: inset 0 2px 2px #7F959C;
+		box-shadow: inset 0 2px 2px #7F959C, 0 0 1px #7F959C;
 		display: inline-block;
-		width: 75%;
-		box-sizing: border-box;
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-		border-right:none;
-		border-color: inherit;
+		width: 90%;
 	}
 	
 	
@@ -31,37 +25,14 @@
 		-moz-outline-style: none;
 		outline: 0;
 	}
-
-	
-	#search-button{
-		display: inline-block;
-		appearance: none;
-		border: 1px solid;
-		border-radius: 1em;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-		position: absolute;
-		left: 75%;
-		right: 0;
-		top: 0;
-		height: 100%;
-		padding: 0;
-		padding-top: 3px;
-		box-align: baseline;
-		border-color: inherit;
-	}
 </style>
 <div class='search-box'>
-	<input type='text' id='search-input' placeholder="Type and search..." />
-	<button id='search-button' class='downbutton' >Search</button>
+	<input type='text' id='search-input' placeholder="Press enter to search..." />
 	<script type='text/javascript'>
-		$('#search-button').click(function(){
-			if($('#search-box').val())
-				window.open('http://www.google.com/search?q=site:yjyao.com '+$('#search-box').val());
-		});
 		$("#search-input").keyup(function(event){
-			if(event.keyCode == 13){
-				$("#search-button").click();
+			console.log(event.keyCode);
+			if(event.keyCode == 13&& $(this).val()){
+				window.open('http://www.google.com/search?q=site:yjyao.com '+$(this).val());
 			}
 		});
 	</script>
