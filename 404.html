@@ -28,6 +28,20 @@ body{
 	float: right;
 	background: linear-gradient(left,rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0))
 }
+@media only screen and (max-width: 500px),(max-device-width: 480px){
+	.left, .right{
+		width: 100%;
+		height: auto;
+		background: rgba(255,255,255, 0.5);
+		float: none;
+		padding-top:1em;
+		padding-bottom: 1em;
+	}
+	.message{
+		width: auto;
+		height: auto;
+	}
+}
 </style>
 <body>
 	<header>
@@ -46,7 +60,7 @@ body{
 		<div class='right'>Or go back to the <a href='/'>home page</a>.</div>
 	</div>
 	<footer>
-		<p>&copy; Yao Yujian 2012 | All rights reserved</p>
+		<p>&copy; Yao Yujian 2012</p>
 	</footer>
 </body>
 </html>

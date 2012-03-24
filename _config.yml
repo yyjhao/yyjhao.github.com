@@ -2,7 +2,56 @@ permalink : /:year/:month/:title.html
 pygments: true
 paginate: 5
 lsi: false
-auto: false
-server: false
+auto: true
+server: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
+projects:
+  Crazy Paint:
+    folder: canvas
+    url: /projects/canvas/crazyPaint.html
+    image: craP.png
+    description: >
+      Let the computer draw random shapes. The result is, surprisingly, 
+      very nice. Below is a picture drawn by Crazy Paint."
+  Simple Paint:
+    folder: canvas
+    url: /projects/canvas/simplePaint.html
+    description: Want to paint stuff yourself? Try this one.
+  Dots:
+    folder: canvas
+    url: /projects/canvas/dotsMove.html
+    image: dots.png
+    description: >
+      Dots move. Dots are attracted to your mouse. Dots bounce off when 
+      colliding with the borders. Dots slow down over time. These are 
+      the simple physics rules applied to the dots in this game. You can 
+      also enable the paint mode in the settings on the upper left corner, 
+      and see some crazy crayon-ish painting!
+  Solitaire Three in One:
+    description: >
+      My three Solitaire games (Klondike, Freecell and Spider) coded in HTML 
+      and javascript. It runs slow on browsers other than Chrome as it uses 
+      a lot of css3 animation. Sold to a company in December 2011.
+    icon: /images/solitaire-icon.png
+  Treb:
+    url: http://treb.sf.net/
+    description: >
+      Another Qt app I have coded. It allows users to place icons in the 
+      system tray for fast access of mobile or small websites. Good to use 
+      with Google+, facebook or Google Tasks!
+    icon: /images/treb-icon.png
+  EMB Desktop Client:
+    url: http://embclient.sourceforge.net/
+    description: >
+      My first 'published' Qt app. It's written for our school's decade-old 
+      electronic message board web site. Reception was poor though, as people 
+      prefer to just click the bookmark link in their browser.
+    icon: /images/emb-icon.png
+  Wireless@HCI autologin Daemon:
+    url: https://sourceforge.net/projects/hciautologin/
+    description: >
+      A Qt app I coded to try out the graphical library I wrote for Treb 
+      (see above). It's just a daemon that automatically log users into the 
+      wireless network in my boarding school.
+    icon: /images/autologin-icon.png

@@ -1,5 +1,7 @@
 ---
 layout: default
+projectLimit: 5
+whole: true
 ---
 <header class='no-border'>
 	<h1>Yujian's Programming Archive</h1>
@@ -43,20 +45,6 @@ layout: default
 		<h3>My Projects</h3>
 	</header>
 	<div class='widget-content'>
-		{% for post in site.categories.Projects %}
-			{% if post.summary %}
-			<a class='project' href='{{ post.url }}'>
-				<div class='project-inner'>
-					<img src='{{ post.icon }}' class='icon'/>
-					<h4>{{ post.title }}</h4>
-					<p>
-						{{ post.summary }}
-					</p>
-					<p class='link'>More...</p>
-				</div>
-			</a>
-			{% endif %}
-		{% endfor %}
-		<p><a href='/categories/projects'>More projects...</a></p>
+		{% include projects.html %}
 	</div>
 </div>
