@@ -440,19 +440,20 @@ img{
 	margin: 5px;
 }
 
-img.float-left{
+.float-left{
 	margin-left: 0;
 	float:left;
 }
 
-img.float-right{
+.float-right{
 	margin-right: 0;
 	float: right;
 }
 
-img.center{
+.center{
 	display: block;
 	margin: 5px auto;
+	text-align: center;
 }
 
 article img{
@@ -488,15 +489,12 @@ blockquote:before{
 	width: 100%;
   }
   
-  .main{
-	min-height: none;
-  }
-  
   .content{
 	margin-right: 0;
 	border-right: none;
 	border-bottom: 1px dashed #7F959C;
 	max-width: none;
+	min-height: 0;
   }
   
   .content>*{
