@@ -2,8 +2,8 @@ permalink : /:year/:month/:title.html
 pygments: true
 paginate: 5
 lsi: false
-auto: true
-server: true
+auto: false
+server: false
 exclude: [".git", "update_site"]
 url: http://yjyao.com
 projects:
