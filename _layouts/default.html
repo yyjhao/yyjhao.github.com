@@ -2,12 +2,8 @@
 <html>
 {% include header.html %}
 <body ontouchstart="">
-	<div class='main'>
-		<div class='content {% if page.whole %}{{ "whole" }}{% endif %}'>
-		{{ content }}
-		</div>
-		{% include sidebar.html %}
-	</div>
+	{{ content }}
+	{% include sidebar.html %}
 	<footer>
 		<p>&copy; Yao Yujian 2012</p>
 	</footer>

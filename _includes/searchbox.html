@@ -1,22 +1,24 @@
 <style>
 	.search-box{
 		border-color: #7F959C;
+		padding: 0.5em 0;
 	}
 	
 	#search-input{
-		margin: 0 auto;
+		margin: 0;
 		border-radius: 1em;
 		border: none;
-		appearance: none;
+		-webkit-appearance: none;
 		padding: 3px 1em;
 		box-shadow: inset 0 2px 2px #7F959C, 0 0 1px #7F959C;
-		display: inline-block;
-		width: 90%;
+		display: block;
+		width: 100%;
 	}
 	
 	
 	#search-input:active
 	{
+		box-shadow: inset 0 2px 2px #7F959C, 0 0 1px #7F959C, 0 0 6px white;
 		outline: none;
 	}
 
@@ -29,11 +31,10 @@
 <div class='search-box'>
 	<input type='search' id='search-input' placeholder="Press enter to search..." />
 	<script type='text/javascript'>
-		$("#search-input").keyup(function(event){
-			console.log(event.keyCode);
-			if(event.keyCode == 13&& $(this).val()){
-				window.open('http://www.google.com/search?q=site:yjyao.com '+$(this).val());
+		document.querySelector("#search-input").onkeyup=function(event){
+			if(event.keyCode == 13&& this.value){
+				window.open('http://www.google.com/search?q=site:yjyao.com '+this.value);
 			}
-		});
+		};
 	</script>
 </div>

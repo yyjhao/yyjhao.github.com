@@ -1,31 +1,34 @@
-<ul class='projects block-link-list'>
 {% for item in site.projects %}
 	{% if page.folder == nil or page.folder == item[1].folder %}
 		{% if page.projectLimit == nil or forloop.index0 < page.projectLimit %}
 	<li>
-		<a class='block-link' href="/tags/{{ item[0] | slugize }}">
+		{% capture tag_name %}{{ item[0] | downcase }}{% endcapture %}
+		{% capture lenposts %}{{ site.tags[tag_name] | size }}{% endcapture %}
+		{% if lenposts == '1' %}
+			{% assign href = site.tags[tag_name][0].url %}
+		{% else %}
+			{% capture href %}/tags/{{ item[0] | slugize }}{% endcapture %}
+		{% endif %}
+		<a href="{{ href }}">
 			<header>
-				<h4>
-					{% if item[1].icon %}
+				{% if item[1].icon %}
 					<img class='project-icon' src="{{ item[1].icon }}" />
-					{% endif %}
-					<span>{{ item[0] }}</span>
+				{% endif %}
+				<h4>
+					{{ item[0] }}
 				</h4>
 			</header>
+			<div class='description'>
 			<p>{{ item[1].description }}</p>
 			{% if item[1].image %}	
 			<img class='center' src="/images/{{ item[1].image }}" />
 			{% endif %}
-			<span class='block-link-target'>Read more...&rarr;</span>
+			</div>
 		</a>
 		{% if item[1].url %}
-		<a class='project-inner-right' href="{{ item[1].url }}">Try it out</a>
+		<a class='try-link' href="{{ item[1].url }}">Try it!</a>
 		{% endif %}
 	</li>
 		{% endif %}
 	{% endif %}
 {% endfor %}
-</ul>
-{% if page.projectLimit and site.projects | size > page.projectLimit %}
-<a href='/projects'>More projects....</a>
-{% endif %} 

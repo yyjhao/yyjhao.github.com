@@ -1,12 +1,26 @@
 permalink : /:year/:month/:title.html
 pygments: true
 paginate: 5
-lsi: false
+lsi: true
 auto: false
-server: false
+server: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
 projects:
+  NUS IVLE Downloader:
+    url: https://github.com/yyjhao/IVLEDownloader
+    image: ivledownloader-2.png
+    description: >
+      A small daemon to automatically update and arrange the files from NUS IVLE workbins. Built with C++
+      and Qt so it supports all major platforms.
+  Gomoku In HTML5:
+    url: http://gomoku.yjyao.com/
+    icon: /images/gomoku.png
+    image: gomoku-2.png
+    description: >
+      Gomoku written with some HTML5 features including CSS3 gradients and animation,
+      offline cache and web worker. It also uses jQuery Mobile for the interface. The AI was built using 
+      negascout and my own evaluation function.
   Crazy Paint:
     folder: canvas
     url: /projects/canvas/crazyPaint.html
