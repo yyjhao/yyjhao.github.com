@@ -158,7 +158,7 @@ circle.prototype={
 		}
 		for(var i=0;i<2;i++){
 			s[i]-=f*s[i];
-			c[i]=Math.round(c[i]+s[i]);
+			c[i]=c[i]+s[i];
 			if(c[i]<ra || c[i]+ra>boundary[i]){
 				if(c[i]<ra){
 					c[i]=ra+1;

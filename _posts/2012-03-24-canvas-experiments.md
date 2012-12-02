@@ -9,6 +9,7 @@ tags:
   - games
   - html
   - canvas
+  - javascript
   - crazy paint
   - simple paint
   - dots

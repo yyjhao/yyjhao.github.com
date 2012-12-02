@@ -7,6 +7,12 @@ server: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
 projects:
+  Alarm Clock in HTML:
+    url: /projects/alarm/main.html
+    image: alarm.png
+    description: >
+      A partially working alarm clock built in html5, with the ability to play a song from Youtube when timed out and to set the time
+      using flexible language.
   NUS IVLE Downloader:
     url: https://github.com/yyjhao/IVLEDownloader
     image: ivledownloader-2.png

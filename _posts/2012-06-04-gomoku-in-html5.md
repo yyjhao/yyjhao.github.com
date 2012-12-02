@@ -8,6 +8,7 @@ tags:
   - html5
   - games
   - html
+  - javascript
   - gomoku in html5
 ---
 *You can play the game [here](http://gomoku.yjyao.com/), or install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/ngbpiahelilpgbnonpjfaoegaigopepa).*

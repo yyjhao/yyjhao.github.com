@@ -1,10 +1,10 @@
 var storage = {
 	prefix: 'yyjhao.alarm.',
 	get: function(name){
-		return localStorage[prefix + name];
+		return localStorage[this.prefix + name];
 	},
 	set: function(name, val){
-		localStorage[prefix + name] = val;
+		localStorage[this.prefix + name] = val;
 	}
 };
 
@@ -300,6 +300,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		}else{
 			myPlayer.loadVideoById(results[1]);
 			myPlayer.pauseVideo();
+			storage.set('youtube-id',results[1]);
 		}
 	};
 
