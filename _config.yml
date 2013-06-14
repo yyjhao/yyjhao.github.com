@@ -2,11 +2,23 @@ permalink : /:year/:month/:title.html
 pygments: true
 paginate: 5
 lsi: true
-auto: false
+auto: true
 server: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
 projects:
+  Web Daemon:
+    url: https://github.com/yyjhao/Web-Daemon
+    icon: /images/webdaemon.png
+    image: webdaemon-1.png
+    description: >
+      A mac app to pin websites to the menubar.
+  NUS Morge:
+    url: http://morge.nuscomputing.com
+    image: morge.png
+    description: >
+      A utility to merge nus module timetables in a group, facilitating meeting arrangements.
+      Built during NUS Hack&Roll with 3 friends.
   Alarm Clock in HTML:
     url: /projects/alarm/main.html
     image: alarm.png
