@@ -10,6 +10,13 @@ tags:
   - ivle
   - nus ivle downloader
 ---
+<div class="update-box">
+<strong>Update</strong> 
+<p>New version is available <a href="https://github.com/yyjhao/IVLEDownloader/releases/tag/V1.1">here</a></p>
+
+<p><code>.app</code> for Mac and the other for Windows. Linux user again just compile the app yourself :P</p>
+</div>
+
 *This project is hosted on [Github](https://github.com/yyjhao/IVLEDownloader)*
 
 To me, it's a great hassle to click links to download files from workbins, then move them into

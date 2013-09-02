@@ -15,7 +15,7 @@ tags:
 
 *This project is hosted on [Github](https://github.com/yyjhao/Web-Daemon)*
 
-<img class='float-left' height="150" src="/images/webdaemon.png" title="web daemon" width="150" /></a>
+<img class='float-left' height="150" src="/images/webdaemon.png" title="web daemon" width="150" />
 
 This is a convenient Mac app I made quite some time ago. The idea is based on
 my previous app [treb](../../2011/08/run-google-task-google-plus-in-your.html),

@@ -11,6 +11,9 @@ tags:
   - javascript
   - gomoku in html5
 ---
+
+*Update: I have open sourced this game on [Github](https://github.com/yyjhao/HTML5-Gomoku)*
+
 *You can play the game [here](http://gomoku.yjyao.com/), or install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/ngbpiahelilpgbnonpjfaoegaigopepa).*
 
 *It also supports Mobile Safari!*
