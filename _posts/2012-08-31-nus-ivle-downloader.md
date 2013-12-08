@@ -64,8 +64,7 @@ Please drag the system tray icon out from the hidden area, as shown here:
 
 ##Downloads(finally):
 * The source code is available on Github: [https://github.com/yyjhao/IVLEDownloader](https://github.com/yyjhao/IVLEDownloader).
-* Compiled exe for Windows: [https://github.com/downloads/yyjhao/IVLEDownloader/IVLE%20Downloader.win.zip](https://github.com/downloads/yyjhao/IVLEDownloader/IVLE%20Downloader.win.zip) (Compiled by Fazli)
-* Compiled app for Mac: [https://github.com/downloads/yyjhao/IVLEDownloader/IVLEDownloader.mac.zip](https://github.com/downloads/yyjhao/IVLEDownloader/IVLEDownloader.mac.zip)
+* **Update:** New version is available <a href="https://github.com/yyjhao/IVLEDownloader/releases/tag/V1.1">here</a>
 
 Note that since the app is not code-signed, Mac users have to go to System Preferences->Security&Privacy and choose "Allow application download from Anywhere"(you may need to unlock this option by clicking the little lock on the bottom left.), or Apple will not let you run this app.
 
