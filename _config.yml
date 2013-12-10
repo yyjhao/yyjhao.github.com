@@ -2,10 +2,18 @@ permalink : /:year/:month/:title.html
 pygments: true
 paginate: 5
 lsi: true
-auto: true
-server: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
+gems: [ 'jekyll-pandoc-multiple-formats' ]
+markdown: redcarpet
+name: Yao Yujian
+pandoc:
+  skip: false
+  output: ./tmp
+  flags: '--smart'
+  site_flags: '--toc'
+  outputs:
+    markdown:
 projects:
   Web Daemon:
     url: https://github.com/yyjhao/Web-Daemon

@@ -9,14 +9,12 @@ module Jekyll
       self.render
       
       # these must come after render
-      self.generate_tags_categories
       self.generate_archives
       
       self.cleanup
       self.write
       
       # Growl
-      Growl.notify "Build complete.", :title => "Jekyll"
     end
   end
 end

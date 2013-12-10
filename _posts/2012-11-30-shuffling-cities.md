@@ -45,7 +45,7 @@ Also, we now need to reduce the size of the random list by more than just one pe
 
 So now the code roughly looks like this:
 
-{% highlight js %}
+~~~javascript
 while( randomList.length > 0 ){
 	var p = Math.floor( Math.random() * i );
 	randomList[p].isCity = true;
@@ -58,7 +58,7 @@ while( randomList.length > 0 ){
 		randomList[pos].pos = pos; // update the pos
 	}
 }
-{% endhighlight %}
+~~~
 
 To implement `getPosOfTilesAround` function, we can simply do a Breadth First Traversal on the two dimensional representation of the map. Note that we will filter away all tiles that are marked as removed.
 

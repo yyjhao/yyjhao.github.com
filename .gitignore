@@ -1,2 +1,4 @@
-/_site/*
-/update_site/*
+_site/*
+update_site/*
+tmp
+google2d*
