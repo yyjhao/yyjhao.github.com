@@ -2,7 +2,7 @@
 ---
 
 $light-color:#fcfcff;
-$darker-color: #C0CFFF;
+$darker-color: darken($light-color, 10%);
 $darkest-color: #7F959C;
 $dark-text-color: #333;
 $header-text-color: #3A3F5E;
@@ -445,27 +445,34 @@ aside{
 
 .projects{
 	padding: 0;	
-	word-spacing: -1em;
 	margin-bottom: -2em;
 	margin-right: 0;
 	max-width: 1400px;
 
+	&:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
 	&>li{
-		word-spacing: normal;
-		letter-spacing: normal;
-		display: inline-block;
+		display: block;
+		float: left;
 		width: 25%;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		position: relative;
-		margin-bottom: 2em;
-		vertical-align: top;
+		height: 500px;
+		padding: 10px;
+	}
 
-		background: $light-color;
-		border-radius: 0.3em;
+	.inner{
+		border: 1px dashed darken($light-color, 10%);
+		max-height: 480px;
+		overflow-y: scroll;
 
-		box-shadow:  0 -4px 3px rgba($darkest-color, 0.4);
-		@include gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+		background: darken($light-color, 2%);
+
 		text-shadow: 0 1px 1px white;
 
 		@include duration(0.3s);
@@ -502,7 +509,6 @@ aside{
 				box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				font-size: 0.85em;
-				border-top: 1px solid #fff;
 
 				&>img{
 					max-width: 90%;
@@ -514,7 +520,9 @@ aside{
 				padding: 10px;
 				box-sizing: border-box;
 				-moz-box-sizing: border-box;
-				border-bottom: 1px solid $darker-color;
+				height: 84px;
+				border-bottom: 1px dashed darken($light-color, 10%);
+				line-height: 64px;
 				&>img{
 					width: 64px;
 					height: 64px;
@@ -547,8 +555,6 @@ aside{
 			}
 		}
 		&:hover{
-			@include transform(scale(1.1));
-			box-shadow: 0 0 7px rgba(20,20,20,0.5);
 			z-index: 1;
 			background: lighten($light-color, 5%);
 			&>a>header>h4{
@@ -560,9 +566,7 @@ aside{
 }
 .projects.full-list>li{
 	display: block;
-	width: auto;
 	margin: 0 auto;
-	max-width: 1000px;
 
 	img{
 		max-width: 60%!important;

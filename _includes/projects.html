@@ -2,6 +2,7 @@
 	{% if page.folder == nil or page.folder == item[1].folder %}
 		{% if page.projectLimit == nil or forloop.index0 < page.projectLimit %}
 	<li>
+		<div class="inner">
 		{% capture tag_name %}{{ item[0] | downcase }}{% endcapture %}
 		{% capture lenposts %}{{ site.tags[tag_name] | size }}{% endcapture %}
 		{% if lenposts == '1' %}
@@ -11,9 +12,6 @@
 		{% endif %}
 		<a href="{{ href }}">
 			<header>
-				{% if item[1].icon %}
-					<img class='project-icon' src="{{ item[1].icon }}" />
-				{% endif %}
 				<h4>
 					{{ item[0] }}
 				</h4>
@@ -25,9 +23,7 @@
 			{% endif %}
 			</div>
 		</a>
-		{% if item[1].url %}
-		<a class='try-link' href="{{ item[1].url }}">Try it!</a>
-		{% endif %}
+		</div>
 	</li>
 		{% endif %}
 	{% endif %}
