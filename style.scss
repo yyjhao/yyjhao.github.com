@@ -200,7 +200,8 @@ blockquote{
 	}
 
 	h1{
-		font-family: 'Fugaz One', cursive;
+		font-family: "Arial Black", Gadget, sans-serif;
+		font-style: italic;
 		text-shadow:0px 0px 0 rgb(27,32,63),1px 1px 0 rgb(6,11,42),2px 2px 0 rgb(0,0,21), 3px 3px 0 rgb(0,0,0),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
 		border-bottom: 5px solid;
 
@@ -690,6 +691,10 @@ aside{
 		margin-right: $right-bar-width;
 		padding: 1em;
 	}
+
+	.projects>li{
+		width: 50%;
+	}
 }
 
 @media only screen and (max-width: 800px),(max-device-width: 480px){
@@ -723,10 +728,13 @@ aside{
   	.projects{
 		width: 100%;
 		margin-bottom: 0;
-		&>li{
-			display: block;
-			width: 100%;
+		.inner{
+			height: auto;
+		}
 
+		&>li{
+			width: 100%;
+			height: auto;
 			&:hover{
 				@include transform(none);
 			};
