@@ -192,9 +192,20 @@ blockquote{
 	}
 }
 
+.main-wrap{
+	width: -webkit-calc(100% - #{$right-bar-width});
+	width: -moz-calc(100% - #{$right-bar-width});
+	width: -ms-calc(100% - #{$right-bar-width});
+	width: calc(100% - #{$right-bar-width});
+	float: left;
+}
+
+.main-footer{
+	clear: both;
+}
+
 .main-title{
 	font-size: 1.5em;
-	margin-right: $right-bar-width;
 	&>a:hover{
 		text-decoration: none;
 	}
@@ -236,11 +247,10 @@ aside{
 	width: $right-bar-width;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	float: left;
 	padding-right: 1.5em;
-	position: absolute;
-	right: 0;
-	top: 0;
 	padding-bottom: 2em;
+	padding-top: 2em;
 
 	h4{
 		border-bottom: 4px solid;
@@ -277,7 +287,6 @@ aside{
 
 
 .main{
-	margin-right: $right-bar-width;
 	padding: 2em;
 	padding-bottom: 0;
 	&>h3.title{
