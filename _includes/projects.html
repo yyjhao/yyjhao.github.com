@@ -1,4 +1,4 @@
-{% for item in site.projects %}
+{% for item in site.data.projects %}
 	{% if page.folder == nil or page.folder == item[1].folder %}
 		{% if page.projectLimit == nil or forloop.index0 < page.projectLimit %}
 	<li>

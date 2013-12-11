@@ -7,6 +7,7 @@ category: Projects
 tags:
   - html5
   - games
+  - ai
   - html
   - javascript
   - gomoku in html5
