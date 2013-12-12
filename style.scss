@@ -689,16 +689,15 @@ aside{
 
 @media (max-width: 1100px){
 	$right-bar-width: 150px;
-	.main-title{
-		margin-right: $right-bar-width;
-	}
 	aside{
 		width: $right-bar-width;
 	}
 
-	.main{
-		margin-right: $right-bar-width;
-		padding: 1em;
+	.main-wrap{
+		width: -webkit-calc(100% - #{$right-bar-width});
+		width: -moz-calc(100% - #{$right-bar-width});
+		width: -ms-calc(100% - #{$right-bar-width});
+		width: calc(100% - #{$right-bar-width});
 	}
 
 	.projects>li{
@@ -714,6 +713,10 @@ aside{
   		margin-right: 0;
   	}
 
+  	.main-wrap{
+  		width: 100%;
+  	}
+
   	.main{
   		margin-right: 0;
   		padding: 0;
@@ -724,7 +727,6 @@ aside{
   	}
 
   	aside{
-		position: static;
 		padding: 0;
 		text-align: center;
 		width: 100%;
