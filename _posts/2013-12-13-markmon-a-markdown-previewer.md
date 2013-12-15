@@ -17,7 +17,7 @@ tags:
 
 If you use markdown often, chances are that you also use some sort of markdown previewers. Unfortunately, most of them simply generate the HTML and refresh the content when there's an update - which is fine for a lot of use cases, but not when you need to do some post-processing like MathJax.
 
-So this is why I built Markmon, because I often need to use the math in my assignments.
+So I built markmon which focus on improving the re-rendering speed.
 
 ![](/images/markmon.png)
 
@@ -31,3 +31,4 @@ The last part is to build the actual previewer itself. It will be perfect if we 
 
 So here's the final app: a command-line initiated daemon/server that watches the markdown file and converts it to html and send it to clients via socket.io. The client is simply a web frontend which then uses JavaScript to diff the DOM and apply the appropriate update. 
 
+If you are interested, be sure to check out the link in the beginning of this post.
