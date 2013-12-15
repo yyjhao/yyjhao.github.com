@@ -1,3 +1,7 @@
+Markmon:
+  description: >
+    A real-time markdown previewer with fast MathJax re-rendering.
+  image: markmon.png
 Hearts:
   description: >
     An html5 hearts game with a POMDP AI
