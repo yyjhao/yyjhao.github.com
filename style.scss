@@ -326,7 +326,7 @@ aside{
 
 	article{
 		margin: 0 auto;
-		font-size: 1em;
+		font-size: 1.15em;
 		padding: 1.5em;
 		padding-bottom: 0;
 		max-width: 850px;
@@ -341,6 +341,7 @@ aside{
 
 		&>header{
 			text-align: center;
+			font-size: 0.95em;
 
 			&>h2{
 				border-bottom: 4px solid;
