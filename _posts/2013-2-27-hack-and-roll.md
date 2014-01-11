@@ -23,7 +23,8 @@ Working in a team of four was also great. I don't have to style
 the page, write up the server backend, or parse the data - all pushed
 to others :P.
 
-Anyway, here's the product we have hacked out: [NUSMorge](http://morge.nuscomputing.com),
+Anyway, here's the product we have hacked out: <del>[NUSMorge](http://morge.nuscomputing.com)</del>
+[update: new url is [http://morge.yjyao.com](http://morge.yjyao.com)],
 a time table merger that takes in names and corresponding [NUS mods](http://nusmods.com)
 url and produce a merge of everyone's time table so that you can 
 clearly see all the free time slots. It even allows you to hide some of
