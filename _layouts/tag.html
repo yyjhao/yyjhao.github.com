@@ -1,6 +1,16 @@
 ---
-layout: page
+layout: default
 ---
-
-{% assign posts = site.tags[page.tag] %}
-{% include post-listing.html %}
+<div class="main-wrap">
+<div class='main'>
+    <article>
+        <header><h2>{{ page.title }}</h2>
+        </header>
+        {% assign posts = site.tags[page.tag] %}
+        {% include post-listing.html %}
+        <footer>
+            
+        </footer>
+    </article>
+</div>
+</div>

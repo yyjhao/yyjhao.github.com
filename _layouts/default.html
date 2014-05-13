@@ -2,12 +2,26 @@
 <html>
 {% include header.html %}
 <body ontouchstart="">
-    <div class="main-wrap">
+	<div class="hero">
+	<div class="hero-inner">
+	    <div class="hero-content">
+	    <h1><a href="/">Yao Yujian</a></h1>
+	    <p>CS Student from NUS</p>
+	    <nav class='hero-nav'>
+	        <a href='/projects'>Projects</a> |
+	        <a href='/about'>About Me</a>
+	    </nav>
+	    <div class='icons-holder'>
+	      <a href="https://plus.google.com/106942653636327756397/" rel='author'><span class='gplus-icon'>g</span></a>
+	<a href="https://twitter.com/yyjhao"><span class='twitter-icon'>t</span></a>
+	<a href="https://github.com/yyjhao"><img class='link-icon' src="/images/github.png"></a>
+	    </div>
+	  </div>
+	  </div>
+	</div>
 	{{ content }}
-    </div>
-	{% include sidebar.html %}
 	<footer class="main-footer">
-		<p>&copy; Yao Yujian 2012-2013</p>
+		<p>&copy; Yao Yujian 2012-2014</p>
 	</footer>
 	<!-- Piwik -->
 	<script type="text/javascript"> 

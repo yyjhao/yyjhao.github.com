@@ -2,6 +2,7 @@
 	{% if page.folder == nil or page.folder == item[1].folder %}
 		{% if page.projectLimit == nil or forloop.index0 < page.projectLimit %}
 	<li>
+		<div class="background" style="background-image: url(/images/{{ item[1].image }})"></div>
 		<div class="inner">
 		{% capture tag_name %}{{ item[0] | downcase }}{% endcapture %}
 		{% capture lenposts %}{{ site.tags[tag_name] | size }}{% endcapture %}
@@ -18,9 +19,6 @@
 			</header>
 			<div class='description'>
 			<p>{{ item[1].description }}</p>
-			{% if item[1].image %}	
-			<img class='center' src="/images/{{ item[1].image }}" />
-			{% endif %}
 			</div>
 		</a>
 		</div>

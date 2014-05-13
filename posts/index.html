@@ -1,0 +1,29 @@
+---
+layout: default
+title: All Posts
+---
+{% capture moveon %}
+<div class="move-on">
+    {% if paginator.previous_page %}
+        <a class='prev-post' href="{{ paginator.previous_page_path }}">Newer posts</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a class='next-post' href="{{ paginator.next_page_path }}">Older posts</a>
+    {% endif %}
+</div>
+{% endcapture %}
+<div class="main-wrap">
+<div class='main'>
+    <article>
+        <header><h2>{{ page.title }}</h2>
+        {{ moveon }}
+        </header>
+        {% assign posts = paginator.posts %}
+        {% include post-listing.html %}
+        <footer>
+            {{ moveon }}
+        </footer>
+    </article>
+</div>
+</div>
+

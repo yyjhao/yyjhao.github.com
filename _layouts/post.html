@@ -1,19 +1,24 @@
 ---
 layout: default
 ---
-<header class='main-title'>
-	<a href='/'><h1>Yao Yujian</h1></a>
-	<nav>
-		<a href='/projects'>Projects</a>
-		<a href='/about'>About Me</a>
-	</nav>
-</header>
+{% capture moveon %}
+<div class="move-on">
+	{% if page.previous %}
+        <a class='prev-post' href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next %}
+        <a class='next-post' href="{{ page.next.url }}">{{ page.next.title }}</a>
+    {% endif %}
+</div>
+{% endcapture %}
+<div class="main-wrap">
 <div class='main'>
 	<article>
 		<header><h2>{{ page.title }}</h2>
 			<span class='date-time'>
 				{{ page.date | date: "<span class='day'>%d</span><span class='month'>%B</span><span class='year'>%Y</span>" }}
 			</span>
+			{{ moveon }}
 		</header>
 		{% if page.hosted-site %}
 		 <em>This project is hosted on <a href='{{ page.hosted-url }}'>{{ page.hosted-site }}</a>.</em>
@@ -30,6 +35,7 @@ layout: default
 				{% endfor %}
 				</span>
 			</div>
+			{{ moveon }}
 		</footer>
 	</article>
 <footer>
@@ -47,4 +53,5 @@ layout: default
 	</div>
 	{% include comments.html %}
 </footer>
+</div>
 </div>
