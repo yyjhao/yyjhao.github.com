@@ -1,5 +1,3 @@
-require 'growl'
-
 module Jekyll
   class Site
     def process

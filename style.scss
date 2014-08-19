@@ -551,6 +551,10 @@ aside{
 	margin-right: 0;
 	max-width: 1400px;
 
+	-webkit-column-width: 300px;
+	-moz-column-width: 300px;
+	column-width: 300px;
+
 	&:after{
 		content: "";
 		display: block;
