@@ -2,7 +2,7 @@ permalink : /:year/:month/:title.html
 highlighter: pygments
 paginate_path: "posts/page:num"
 paginate: 7
-lsi: false
+lsi: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
 markdown: Pandoc

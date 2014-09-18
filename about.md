@@ -5,7 +5,7 @@ permalink: about/index.html
 ---
 ### About
 
-I am a second-year CS student currently studying in National University of
+I am a third-year CS student currently studying in National University of
 Singapore.
 
 I enjoying the process of problem solving - both solving puzzles and real-life
