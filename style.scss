@@ -349,12 +349,14 @@ aside{
 	height: 20em;
 	width: 100%;
 	position: relative;
+	box-sizing: border-box;
 	margin-bottom: 50px;
 
 	.hero-inner {
 		background-color: rgba(black, 0.5);
 		height: 100%;
 		text-align: center;
+		box-sizing: border-box;
 
 		&:after {
 			content: "";
@@ -397,6 +399,20 @@ aside{
 				&:hover {
 					text-decoration: underline;
 				}
+			}
+		}
+	}
+}
+
+.big-hero {
+	.hero {
+		height: 100vh;
+
+		.hero-inner {
+			height: 100vh;
+
+			&:after {
+				height: 100vh;
 			}
 		}
 	}

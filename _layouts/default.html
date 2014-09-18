@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% include header.html %}
-<body ontouchstart="">
+<body ontouchstart="" class="{% if page.big_hero %} big-hero {% endif %}">
 	<div class="hero">
 	<div class="hero-inner">
 	    <div class="hero-content">
@@ -23,6 +23,11 @@
 	<footer class="main-footer">
 		<p>&copy; Yao Yujian 2012-2014</p>
 	</footer>
+	<script>
+		if (navigator.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i)) {
+			document.body.classList.remove('big-hero');
+		}
+	</script>
 	<!-- Piwik -->
 	<script type="text/javascript"> 
 	  var _paq = _paq || [];
