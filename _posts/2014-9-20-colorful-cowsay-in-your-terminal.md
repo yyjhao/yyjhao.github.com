@@ -26,8 +26,6 @@ After that, add the following line to your `.bashrc` (or `.bash_profile`) if you
 fortune | cowsay -f $(cowsay -l | tail -n +2 | tr ' ' '\n' | gshuf -n 1) | lolcat
 {% endhighlight %}
 
-Note that `/usr/local/share/cows` depends on your `cowsay`'s cowfiles, which you can find out by running `cowsay -l` in your terminal.
-
 This line basically pipes a random fortune to a random 'cow', then to `lolcat`, which adds colors. The slowest part is `lolcat` because it's ruby, but most of the time the delay is acceptable given the nice final effects.
 
 Hope this is useful =)
