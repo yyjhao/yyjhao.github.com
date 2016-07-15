@@ -1,66 +1,13 @@
 ---
+layout: full_page
+title: Not Found
 ---
-<!DOCTYPE html>
-<html>
-{% include header.html %}
-<style>
-.left, .right{
-	width: 250px;
-	padding-top: 2em;
-	height: 100%
-}
-body{
-	text-align:center;
-}
-.message{
-	width:504px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 300px;
-}
-.left{
-	float: left;
-	border-right: 2px solid white;
-	background: linear-gradient(right,rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0))
-}
-
-.right{
-	float: right;
-	background: linear-gradient(left,rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0))
-}
-@media only screen and (max-width: 500px),(max-device-width: 480px){
-	.left, .right{
-		width: 100%;
-		height: auto;
-		background: rgba(255,255,255, 0.5);
-		float: none;
-		padding-top:1em;
-		padding-bottom: 1em;
-	}
-	.message{
-		width: auto;
-		height: auto;
-	}
-}
-</style>
-<body>
 	<header>
 		<h1>
 			404
 		</h1>
 		<h2>Page not found.</h2>
 	</header>
-	<div class='message'>
-		<div class='left'>
-			<div>Try searching for it?</div>
-			<div style='margin: 1em auto; width: 85%'>
+			<div>Try searching for it?
 				{% include searchbox.html %}
 			</div>
-		</div>
-		<div class='right'>Or go back to the <a href='/'>home page</a>.</div>
-	</div>
-	<footer>
-		<p>&copy; Yao Yujian 2012</p>
-	</footer>
-</body>
-</html>
