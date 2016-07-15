@@ -10,7 +10,7 @@ safe: false
 highlighter: rouge
 paginate_path: "posts/page:num"
 paginate: 7
-exclude: [".git", "update_site"]
+exclude: [".git"]
 url: http://yjyao.com
 name: Yujian Yao
 sass:
