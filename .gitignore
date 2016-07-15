@@ -1,4 +1,5 @@
 _site/*
+.sass_cache/*
 update_site/*
 tmp
 google2d*
