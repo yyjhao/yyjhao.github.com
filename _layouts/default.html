@@ -5,45 +5,26 @@
 	<div class="hero">
 	<div class="hero-inner">
 	    <div class="hero-content">
-	    <h1><a href="/">Yao Yujian</a></h1>
-	    <p>CS Student from NUS</p>
+	    <h1><a href="/">Yujian Yao</a></h1>
+	    <p>Software Engineer</p>
 	    <nav class='hero-nav'>
 	        <a href='/projects'>Projects</a> |
 	        <a href='/about'>About Me</a>
 	    </nav>
 	    <div class='icons-holder'>
-	      <a href="https://plus.google.com/106942653636327756397/" rel='author'><span class='gplus-icon'>g</span></a>
-	<a href="https://twitter.com/yyjhao"><span class='twitter-icon'>t</span></a>
-	<a href="https://github.com/yyjhao"><img class='link-icon' src="/images/github.png"></a>
+            {% include about-min.html %}
 	    </div>
 	  </div>
 	  </div>
 	</div>
 	{{ content }}
 	<footer class="main-footer">
-		<p>&copy; Yao Yujian 2012-2014</p>
+		<p>&copy; Yujian Yao 2012-{{ site.time | date: '%Y' }}</p>
 	</footer>
 	<script>
 		if (navigator.userAgent.match(/(iPad|iPhone|iPod touch);.*CPU.*OS 7_\d/i)) {
 			document.body.classList.remove('big-hero');
-		}
+        }
 	</script>
-	<!-- Piwik -->
-	<script type="text/javascript"> 
-	  var _paq = _paq || [];
-	  _paq.push(['trackPageView']);
-	  _paq.push(['enableLinkTracking']);
-	  (function() {
-	    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.yjyao.com//";
-	    _paq.push(['setTrackerUrl', u+'piwik.php']);
-	    _paq.push(['setSiteId', 1]);
-	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-	    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-	  })();
-
-	</script>
-	<noscript><p><img src="http://piwik.yjyao.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-	<!-- End Piwik Code -->
-
 </body>
 </html>

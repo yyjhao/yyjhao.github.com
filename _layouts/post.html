@@ -25,16 +25,6 @@ layout: default
 		{% endif %}
 		{{ content }}
 		<footer>
-			<div class='tag-info'>
-				<span>
-				This post is tagged in
-				</span>
-				<span>
-				{% for tag in page.tags %}
-						<a class='tag' href='/tags/{{ tag | slugize }}'>{{ tag }}</a>
-				{% endfor %}
-				</span>
-			</div>
 			{{ moveon }}
 		</footer>
 	</article>

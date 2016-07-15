@@ -1,12 +1,15 @@
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
 permalink : /:year/:month/:title.html
-highlighter: pygments
+safe: false
+highlighter: rouge
 paginate_path: "posts/page:num"
 paginate: 7
-lsi: true
 exclude: [".git", "update_site"]
 url: http://yjyao.com
-markdown: Pandoc
-name: Yao Yujian
-pandoc:
-  format: html5
-  extensions: [smart, mathjax]
+name: Yujian Yao
