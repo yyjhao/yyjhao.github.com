@@ -13,3 +13,6 @@ paginate: 7
 exclude: [".git", "update_site"]
 url: http://yjyao.com
 name: Yujian Yao
+sass:
+    sass_dir: ./style
+    style: compressed

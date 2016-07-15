@@ -1,163 +1,11 @@
 ---
 ---
 
-$light-color:#dde2dd;
-$darker-color: darken($light-color, 20);
-$darkest-color: #777;
-$dark-text-color: #555;
-$header-text-color: #333;
-$line-color: darken($light-color, 10);
-$light-text-color: #fff;
-$profile-size: 80px;
-$line-thinkness: 1px;
-$hero-line-thinkness: 2px;
-$article-font: Georgia, serif;
-
-.clear-inner-float {
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
-
-.clear-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	&>li {
-		float: left;
-	}
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
-
-.block-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.inline-block-list {
-	@extend .block-list;
-
-	&>li {
-		display: inline-block;
-		vertical-align: middle;
-	}
-}
-
-@mixin duration($time){
-	-webkit-transition-duration: $time;
-	-moz-transition-duration: $time;
-	-ms-transition-duration: $time;
-	-o-transition-duration: $time;
-	transition-duration: $time;
-}
-
-@mixin transform($val){
-	-webkit-transform: $val;
-	-moz-transform: $val;
-	-ms-transform: $val;
-	-o-transform: $val;
-	transform: $val;
-}
-
-@mixin gradient($dir, $start, $end){
-	background-image: -webkit-linear-gradient($dir, $start, $end);
-	background-image: -moz-linear-gradient($dir, $start, $end);
-	background-image: -ms-linear-gradient($dir, $start, $end);
-	background-image: -o-linear-gradient($dir, $start, $end);
-	background-image: linear-gradient($dir, $start, $end);
-}
-
-header, nav, section, article, aside, footer, hgroup{
-	display:block;
-}
-
-a:active
-{
-	outline: none;
-}
-
-a:focus
-{
-	-moz-outline-style: none;
-	outline: 0;
-}
-
-html{
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	tap-highlight-color: rgba(0,0,0,0);
-}
-
-
-body{
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-	color: $dark-text-color;
-	margin: 0 auto;
-	position: relative;
-	max-width: 2400px;
-}
-
-body>footer{
-	text-align: center;
-	padding:20px;
-}
-
-article{
-	font-size: 0.95em;
-	line-height: 1.4;
-	font-family: $article-font;
-}
-
-h1,h2,h3,h4,h5,h6 { font-weight: normal; color: $header-text-color; }
-
-h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
-h2 { font-size: 2em; margin-bottom: 0.75em; }
-h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
-h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
-h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
-h6 { font-size: 1em; font-weight: bold; }
-
-h1 img, h2 img, h3 img,
-h4 img, h5 img, h6 img {
-  margin: 0;
-}
-
-li ul,
-li ol  { margin: 0; }
-ul, ol { margin: 0 1.5em 1.5em 0; padding-left: 1.5em; }
-
-ul     { list-style-type: disc; }
-ol     { list-style-type: decimal; }
-
-dl     { margin: 0 0 1.5em 0; }
-dl dt  { font-weight: bold; }
-dd     { margin-left: 1.5em;}
-
-img{
-	margin: 5px;
-}
-
-.float-left{
-	margin-left: 0;
-	float:left;
-}
-
-.float-right{
-	margin-right: 0;
-	float: right;
-}
-
-.center{
-	display: block;
-	margin: 5px auto;
-	text-align: center;
-}
+@import "pygments";
+@import "config";
+@import "util";
+@import "fixes";
+@import "basic";
 
 pre code{
 	background: $light-color;
@@ -179,7 +27,7 @@ a img{
 a{
 	&:link{
 		@include duration(0.2s);
-		color: #002D82; 
+		color: #002D82;
 		text-decoration: none;
 		&:hover{
 			color: lighten(#002D82, 20);
@@ -216,24 +64,6 @@ a{
 		&:before {
 			content: "\2190"
 		}
-	}
-}
-
-a.tag{
-	background: $light-color;
-	text-decoration: none;
-	box-shadow: 0 1px 1px $darkest-color, inset 0 1px 1px white;
-	display: inline-block;
-	vertical-align: top;
-	padding: 0.2em 0.5em;
-	border-radius: 1.2em;
-	height: 1.2em;
-	line-height: 1.2;
-	transition-duration: 0;
-
-	&:active{
-		box-shadow: inset 0 1px 1px $darkest-color, 0 1px 1px white;
-		line-height: 1.4;
 	}
 }
 
@@ -325,7 +155,7 @@ aside{
 	padding-right: 0;
 	margin-bottom: 0;
 
-	&>li{		
+	&>li{
 		&>a{
 			padding: 6px;
 			display: block;
@@ -336,20 +166,17 @@ aside{
 	}
 }
 
-
 .tag-info>span{
 	vertical-align: bottom;
 }
 
 
 .hero {
-	background-image: url(/images/hero.JPG);
+	background-image: url(/images/hero.jpg);
 	background-size: cover;
 	background-position: center;
 	height: 20em;
 	width: 100%;
-	position: relative;
-	box-sizing: border-box;
 	margin-bottom: 50px;
 
 	.hero-inner {
@@ -357,25 +184,13 @@ aside{
 		height: 100%;
 		text-align: center;
 		box-sizing: border-box;
-
-		&:after {
-			content: "";
-			display: inline-block;
-			height: 100%;
-			vertical-align: middle;
-		}
-	}
-
-	.hero-content {
-		vertical-align: middle;
-		display: inline-block;
-		text-align: center;
+        display: flex;
 		color: white;
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
 		font-weight: lighter;
 		text-shadow: 0 1px 2px rgba(black, 0.4);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
 		nav {
 			margin: 1em 0;
@@ -562,7 +377,7 @@ aside{
 }
 
 .projects{
-	padding: 0;	
+	padding: 0;
 	margin-bottom: -2em;
 	margin-right: 0;
 
@@ -610,7 +425,7 @@ aside{
 				color: white;
 				text-decoration: none;
 			}
-		
+
 			&>.description{
 				@include duration(0.3s);
 				padding: 10px 0.6em;

@@ -1,0 +1,61 @@
+
+.clear-inner-float {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.clear-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	&>li {
+		float: left;
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.block-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.inline-block-list {
+	@extend .block-list;
+
+	&>li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+@mixin duration($time){
+	-webkit-transition-duration: $time;
+	-moz-transition-duration: $time;
+	-ms-transition-duration: $time;
+	-o-transition-duration: $time;
+	transition-duration: $time;
+}
+
+@mixin transform($val){
+	-webkit-transform: $val;
+	-moz-transform: $val;
+	-ms-transform: $val;
+	-o-transform: $val;
+	transform: $val;
+}
+
+@mixin gradient($dir, $start, $end){
+	background-image: -webkit-linear-gradient($dir, $start, $end);
+	background-image: -moz-linear-gradient($dir, $start, $end);
+	background-image: -ms-linear-gradient($dir, $start, $end);
+	background-image: -o-linear-gradient($dir, $start, $end);
+	background-image: linear-gradient($dir, $start, $end);
+}
