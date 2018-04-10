@@ -1,4 +1,4 @@
---- 
+---
 name: nus-ivle-downloader
 layout: post
 title: NUS IVLE Downloader
@@ -11,10 +11,10 @@ tags:
   - nus ivle downloader
 ---
 <div class="update-box">
-<strong>Update</strong> 
-<p>New version is available <a href="https://github.com/yyjhao/IVLEDownloader/releases/tag/V1.1">here</a></p>
-
-<p><code>.app</code> for Mac and the other for Windows. Linux user again just compile the app yourself :P</p>
+<strong>Update</strong>
+<p>This app has stopped working as the school revamps the IVLE API and limits the poll rate.
+This can be fixed by updating the code, but as I have graduated there is no easy way for me to test.</p>
+<p>If you or friends of you wants to fix this, let me know and I am happy to pass on the project. It's open source anyway.</p>
 </div>
 
 *This project is hosted on [Github](https://github.com/yyjhao/IVLEDownloader)*
@@ -22,7 +22,7 @@ tags:
 To me, it's a great hassle to click links to download files from workbins, then move them into
 a proper folder, and try to remember what the latest files were.
 
-So I coded this Dropbox-like solution to free myself (and countless hardworking students) from this 
+So I coded this Dropbox-like solution to free myself (and countless hardworking students) from this
 extremely time-consuming task. May I introduce to you-
 
 <b>THE NUS IVLE Downloader!</b>
@@ -39,7 +39,7 @@ or "All files up to date", if the process is done. You can force an update by cl
 "Recently downloaded files" item gives you a list of 5 recently downloaded files, so you can do your
 new tutorials, read your new lecture notes etc. pretty conveniently.
 
-Clicking open shows you the following window, which is basically a log of all the files IVLE Downloader 
+Clicking open shows you the following window, which is basically a log of all the files IVLE Downloader
 has downloaded.
 
 <img src='/images/ivledownloader-2.png' class='center' />
