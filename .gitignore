@@ -3,3 +3,4 @@ _site/*
 update_site/*
 tmp
 google2d*
+npm-debug.log

@@ -2,9 +2,9 @@ github: [metadata]
 kramdown:
   input: GFM
   hard_wrap: false
-gems:
-  - jekyll-coffeescript
+plugins:
   - jekyll-paginate
+  - jekyll-coffeescript
 permalink : /:year/:month/:title.html
 safe: false
 highlighter: rouge
