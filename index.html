@@ -5,23 +5,14 @@ whole: true
 big_hero: true
 simpleSidebar: true
 ---
-<div class="main-wrap large">
+<div class="main-wrap">
 <div class='main'>
-<section class='half'>
+<section>
     <h2>Recent posts</h2>
-    <div class="move-on"><a href="/posts" class="next-post">more</a></div>
     {% assign posts = site.posts %}
     {% assign listing_limit = 5 %}
     {% include post-listing.html %}
-</section>
-<section class='half'>
-<header>
-    <h2>Projects</h2>
-</header>
-<div class="move-on"><a href="/projects" class="next-post">more</a></div>
-<ul class='projects full-list'>
-    {% include projects.html %}
-</ul>
+    <div class="move-on"><a href="/posts" class="next-post">more</a></div>
 </section>
 </div>
 </div>

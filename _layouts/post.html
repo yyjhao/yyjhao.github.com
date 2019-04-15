@@ -15,9 +15,9 @@ layout: default
 <div class='main'>
 	<article>
 		<header><h2>{{ page.title }}</h2>
-			<span class='date-time'>
+			<div class='date-time'>
 				{{ page.date | date: "<span class='day'>%d</span><span class='month'>%B</span><span class='year'>%Y</span>" }}
-			</span>
+			</div>
 			{{ moveon }}
 		</header>
 		{% if page.hosted-site %}

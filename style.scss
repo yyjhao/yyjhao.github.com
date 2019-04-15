@@ -290,40 +290,23 @@ aside{
 
 			&>h2{
 				border-bottom: $line-thinkness solid;
+				margin-bottom: 0;
 			}
 
 			&>.date-time{
-				position: absolute;
-				right: 0;
-				top: 0.5em;
-				padding: 0.7em 0;
-				text-align:center;
-				border: $line-thinkness solid;
-				color: lighten($header-text-color, 10%);
-				border-radius: 10000px;
-				height: 6em;
-				width: 6em;
-				box-sizing: border-box;
-				-moz-box-sizing: border-box;
-
-				@include transform(rotate(-25deg));
-
+				margin-bottom: 0.75em;
+				margin-left: auto;
+				text-align: right;
 				&>span{
-					display: block;
 					padding: 0;
 					margin: 0;
 					line-height: 1;
-				}
-				&>.day{
-					font-size: 2em;
-				}
-				&>.month{
 					font-size: 1em;
+					&:not(:last-of-type):after {
+						content: "\00b7";
+						margin: 0 2px;
+					}
 				}
-				&>.year{
-					font-size: 1em;
-				}
-
 			}
 		}
 
