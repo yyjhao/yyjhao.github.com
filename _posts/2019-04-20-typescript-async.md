@@ -15,7 +15,7 @@ _Note: all the code in this post is in TypeScript._
 
 Suppose we want to implement the following function:
 `function retry<T>(action: () => Promise<T>, n: number): Promise<T>` such
-that it preforms the action and retrieves the value and retries up to
+that it performs the action and retrieves the value and retries up to
 n times, if the action fails.
 
 Had `action` been a synchronous function, it may be natural to use a for loop,
