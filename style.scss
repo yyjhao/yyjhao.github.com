@@ -7,8 +7,16 @@
 @import "fixes";
 @import "basic";
 
+code {
+	background: lighten(#272822, 70);
+	padding: 0 5px;
+	border-radius: 5px;
+	vertical-align: baseline;
+	display: inline-block;
+}
+
 pre code{
-	background: $light-color;
+	background: #272822;
 	padding: 10px;
 	padding-left: 20px;
 	border: 1px solid $darker-color;
